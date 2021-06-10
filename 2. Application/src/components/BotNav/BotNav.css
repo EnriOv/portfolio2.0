@@ -1,0 +1,16 @@
+.botnav {
+  width: 80%;
+  padding: 0 10%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.botnav a {
+  float: left;
+  color: white;
+  padding: 1em 0;
+  text-decoration: none;
+  font-size: 1rem;
+  width: 20%;
+  text-align: center;
+}

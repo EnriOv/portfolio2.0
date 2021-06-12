@@ -1,10 +1,8 @@
-import React from 'react'
-
 import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi';
 
-import './TopNav.css'
+import './TopNav.css';
 
-export const TopNav = () => {
+const TopNav = () => {
     return (
         <header className='top-nav'>
             <h1 className='site-name'>Lorem Ipsum</h1>

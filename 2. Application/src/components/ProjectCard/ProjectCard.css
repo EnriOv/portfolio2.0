@@ -1,0 +1,101 @@
+:root {
+  --main-color: #e8e8e8;
+  --disbable-color: #e8e8e860;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 92% 8%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "info but" "info but";
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+}
+
+.project-card a {
+  text-decoration: none;
+}
+
+.but {
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 0;
+  color: var(--main-color);
+  font-weight: bold;
+  font-family: "Nunito Sans", "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+.active:hover {
+  transition: 0.3s;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.disable {
+  color: var(--disbable-color);
+}
+
+.but span {
+  display: inline-block;
+  transform: rotate(-90deg);
+}
+
+.buttons {
+  grid-area: 1 / 2 / 3 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons > * {
+  flex-basis: 100%;
+}
+
+.but-demo {
+  border-bottom: 2px solid var(--main-color);
+  border-left: 2px solid var(--main-color);
+}
+
+.but-code {
+  border-left: 2px solid var(--main-color);
+}
+
+.project-info {
+  grid-area: 1 / 1 / 3 / 2;
+  padding: 1em 1.5em 1em 1.2em;
+  color: var(--main-color);
+}
+
+.project-title {
+  margin: 0;
+  font-family: "Nunito Sans", "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
+.abstract {
+  margin: 0;
+  padding: 0.8em 0 0.9em;
+  text-align: justify;
+  text-justify: inter-word;
+  font-family: "Roboto", "Nunito Sans", Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+}
+
+.tags-section {
+  display: flex;
+  gap: 0.8em;
+  flex-wrap: wrap;
+  font-weight: bold;
+  font-family: "Roboto", "Nunito Sans", Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+}
+
+.tags-section .tag {
+  border: solid;
+  border-width: 1.5px;
+  border-radius: 100px;
+  padding: 0.3em 1em;
+}

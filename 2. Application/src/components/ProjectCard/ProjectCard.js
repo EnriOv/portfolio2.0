@@ -1,6 +1,11 @@
 import './ProjectCard.css'
 
-const ProjectCard = () => {
+const ProjectCard = (props) => {
+    const {activeButtons} = props;
+
+    const classDemo = activeButtons.demo ? 'but but-demo active' : 'but but-demo disable';
+    const classCode = activeButtons.code ? 'but but-demo active' : 'but but-demo disable';
+
     return (
         <div className='project-card'>
             <div className='project-info'>
@@ -14,12 +19,14 @@ const ProjectCard = () => {
                     <div className='tag'>tag</div>
                 </div>
             </div>
-            <a href='blank' className='demo'>
-                <button className='but but-demo'>DEMO</button>
-            </a>
-            <a href='blank' className='code'>
-                <button className='but but-code'>CODE</button>
-            </a>
+            <div className='buttons'>
+                <button className={classDemo} disabled={activeButtons.demo}>
+                    <span>DEMO</span>
+                </button>
+                <button className={classCode} disabled={activeButtons.code}>
+                    <span>CODE</span>
+                </button>
+            </div>
         </div>
     )
 }

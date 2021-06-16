@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <TopNav />
-      <ProjectCard />
+      <ProjectCard activeButtons={{'demo': true, 'code': true}}/>
       <BotNav />
     </div>
   );

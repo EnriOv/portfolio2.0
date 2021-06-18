@@ -1,5 +1,4 @@
 :root {
-  --main-color: #e8e8e8;
   --disbable-color: #e8e8e860;
 }
 
@@ -14,18 +13,6 @@
 
 .project-card a {
   text-decoration: none;
-}
-
-.but {
-  border: none;
-  background-color: transparent;
-  text-decoration: none;
-  padding: 0;
-  color: var(--main-color);
-  font-weight: bold;
-  font-family: "Nunito Sans", "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 0.8rem;
-  width: 100%;
 }
 
 .active:hover {

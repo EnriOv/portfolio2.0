@@ -1,0 +1,67 @@
+:root {
+  --project-title-size: 1.2rem;
+  --project-desc-size: 0.8rem;
+}
+
+.information {
+  padding: 0;
+}
+
+.blurr {
+  /* Blurred background */
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+.project-img {
+  width: 100%;
+  margin-top: 4em;
+}
+
+.title {
+  color: var(--main-color);
+  text-align: center;
+  font-family: "Nunito Sans", "Roboto", Arial, Helvetica, sans-serif;
+  font-size: var(--project-title-size);
+}
+
+.subtitle {
+  color: var(--main-color);
+  text-align: center;
+  font-family: "Nunito Sans", "Roboto", Arial, Helvetica, sans-serif;
+  font-size: var(--project-title-size);
+}
+
+.description {
+  color: var(--main-color);
+  text-align: justify;
+  font-family: "Roboto", "Nunito Sans", Arial, Helvetica, sans-serif;
+  font-size: var(--project-desc-size);
+  padding: 0 3em;
+}
+
+.tags-project {
+  justify-content: center;
+  font-size: 0.7rem;
+  color: var(--main-color);
+  padding: 0 3em;
+}
+
+.but-section {
+  display: flex;
+  gap: 0.8em;
+  justify-content: center;
+  padding: 1.5em 0;
+}
+
+.but-pro {
+  border: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: var(--main-color);
+  cursor: pointer;
+  padding: 0.5em 0;
+  flex-basis: 6em;
+}

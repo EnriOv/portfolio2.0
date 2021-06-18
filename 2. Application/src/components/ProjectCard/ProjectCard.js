@@ -4,7 +4,7 @@ const ProjectCard = (props) => {
     const {activeButtons} = props;
 
     const classDemo = activeButtons.demo ? 'but but-demo active' : 'but but-demo disable';
-    const classCode = activeButtons.code ? 'but but-demo active' : 'but but-demo disable';
+    const classCode = activeButtons.code ? 'but but-code active' : 'but but-demo disable';
 
     return (
         <div className='project-card'>

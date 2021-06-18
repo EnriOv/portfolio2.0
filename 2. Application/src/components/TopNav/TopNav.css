@@ -1,7 +1,7 @@
 :root {
   --slider-translate: 0.7em;
   --slider-size: 0.7em;
-  --theme-color: #c7e9ff;
+  --toggle-color: #c7e9ff;
 }
 
 .top-nav {
@@ -13,14 +13,14 @@
 
 .site-name {
   margin: 0;
-  color: #e8e8e8;
+  color: var(--main-color);
   font-size: 1.3rem;
   font-family: "Nunito Sans", "Roboto", Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
 .toggle-icons {
-  color: var(--theme-color);
+  color: var(--toggle-color);
   font-size: 1rem;
   margin: 0 0.2em;
 }
@@ -50,7 +50,7 @@
   bottom: 0;
   border: solid;
   border-width: 1px;
-  border-color: var(--theme-color);
+  border-color: var(--toggle-color);
   background-color: transparent;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -63,7 +63,7 @@
   width: var(--slider-size);
   left: 4px;
   bottom: 4px;
-  background-color: var(--theme-color);
+  background-color: var(--toggle-color);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }

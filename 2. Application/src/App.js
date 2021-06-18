@@ -6,7 +6,7 @@ import TopNav from './components/TopNav/TopNav';
 function App() {
   return (
     <div className="App">
-      <ProjectInfo source={'images/twitter-desk.png'} blurr={false}/>
+      
     </div>
   );
 }

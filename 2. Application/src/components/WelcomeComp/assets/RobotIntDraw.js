@@ -94,6 +94,7 @@ const RobotIntDraw = (props) => {
             d="M21.696 126.08H69.32v0"
           ></path>
           <path
+            className='rotate-pie'
             strokeDasharray="none"
             strokeDashoffset="0"
             strokeLinecap="round"

@@ -1,9 +1,12 @@
 import RobotIntDraw from "./assets/RobotIntDraw";
+import WelcomeCompLogic from "./WelcomeCompLogic";
 
 import './WelcomeComp.css';
 
 const WelcomeComp = (props) => {
     const {className} = props;
+
+    WelcomeCompLogic();
 
     return (
         <div className={className}>

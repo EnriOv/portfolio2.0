@@ -4,6 +4,7 @@ import ProjectInfo from './components/ProjectInfo/ProjectInfo';
 import TopNav from './components/TopNav/TopNav';
 
 import { useState, useEffect } from 'react';
+import PhoneView from './components/PhoneView/PhoneView';
 
 function App() {
   const [displayType, setdisplayType] = useState('unknown');
@@ -36,7 +37,7 @@ function App() {
       case 'desktop':
         return <TopNav />
       case 'phone':
-        return <BotNav />
+        return <PhoneView />
       default:
         return <ProjectCard />
     }

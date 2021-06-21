@@ -86,3 +86,69 @@
   border-radius: 100px;
   padding: 0.3em 1em;
 }
+
+@media only screen and (max-width: 281px) {
+  .project-card {
+    grid-template-columns: 90% 10%;
+  }
+
+  .but {
+    font-size: 0.5rem;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .abstract {
+    font-size: 0.7rem;
+  }
+
+  .tags-section {
+    font-size: 0.65rem;
+  }
+}
+
+@media only screen and (min-width: 281px) and (max-width: 320px) {
+  .project-card {
+    grid-template-columns: 90% 10%;
+  }
+
+  .but {
+    font-size: 0.6rem;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .abstract {
+    font-size: 0.7rem;
+  }
+
+  .tags-section {
+    font-size: 0.65rem;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 412px) {
+  .project-card {
+    grid-template-columns: 90% 10%;
+  }
+
+  .but {
+    font-size: 0.7rem;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  .abstract {
+    font-size: 0.8rem;
+  }
+
+  .tags-section {
+    font-size: 0.75rem;
+  }
+}

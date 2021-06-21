@@ -8,7 +8,7 @@ const ProjectInfo = (props) => {
     return (
         <div className='main'>
         <div className={projectClass}>
-            <img className='project-img' src={source} alt='project image'></img>
+            <img className='project-img' src={source} alt='project-image'></img>
             <h2 className='title'>Project Title</h2>
             <p className='description'>Exercitation aute irure laborum sint reprehenderit cillum reprehenderit nulla. Id quis do duis cillum do eiusmod qui nulla irure. Nulla veniam veniam amet esse id. Et commodo ad dolore magna incididunt fugiat ad deserunt ut est quis. Eiusmod cupidatat eu consequat esse ipsum id aliqua sunt. Voluptate culpa pariatur irure deserunt laboris aliqua cillum dolor commodo. Consequat reprehenderit nulla sint Lorem tempor.</p>
             <h2 className='subtitle'>Subtitle</h2>

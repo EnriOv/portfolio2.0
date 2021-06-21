@@ -4,7 +4,7 @@ const ProjectCard = (props) => {
     const {activeButtons} = props;
 
     const classDemo = activeButtons.demo ? 'but but-demo active' : 'but but-demo disable';
-    const classCode = activeButtons.code ? 'but but-code active' : 'but but-demo disable';
+    const classCode = activeButtons.code ? 'but but-code active' : 'but but-code disable';
 
     return (
         <div className='project-card'>
@@ -30,5 +30,9 @@ const ProjectCard = (props) => {
         </div>
     )
 }
+
+ProjectCard.defaultProps = {
+    activeButtons: {'demo': false, 'code': false}
+};
 
 export default ProjectCard

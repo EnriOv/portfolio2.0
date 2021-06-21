@@ -4,7 +4,7 @@
   --toggle-color: #c7e9ff;
 }
 
-.top-nav {
+.topnav {
   display: flex;
   justify-content: space-between;
   align-items: center;

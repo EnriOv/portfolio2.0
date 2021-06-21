@@ -1,12 +1,11 @@
-import BotNav from './components/BotNav/BotNav';
-import ProjectCard from './components/ProjectCard/ProjectCard';
-import ProjectInfo from './components/ProjectInfo/ProjectInfo';
-import TopNav from './components/TopNav/TopNav';
+import AppLogic from './AppLogic';
 
 function App() {
+  const { checkDisplayType } = AppLogic();
+
   return (
     <div className="App">
-      
+      {checkDisplayType()}
     </div>
   );
 }

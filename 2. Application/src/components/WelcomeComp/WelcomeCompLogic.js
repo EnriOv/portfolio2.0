@@ -8,18 +8,6 @@ const WelcomeCompLogic = () => {
     useEffect(() => {
         animationRef.current = anime({
             targets: ".rotate-pie",
-            rotate: {
-                value: -90,
-                delay: function(el, i) {
-                    return i * 800;
-                },
-                easing: "easeInOutSine"
-            },
-            direction: "alternate",
-            loop: true
-        });
-        animationRef.current = anime({
-            targets: ".rotate-pie",
             keyframes: [
                 {rotate: -90},
                 {rotate: 90}

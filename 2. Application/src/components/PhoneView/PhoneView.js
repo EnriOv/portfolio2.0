@@ -1,42 +1,12 @@
 import BotNav from '../BotNav/BotNav';
-import TopNav from '../TopNav/TopNav';
-import ProjectsComp from '../ProjectsComp/ProjectsComp';
+import PhoneViewLogic from './PhoneViewLogic';
 import ProjectInfo from '../ProjectInfo/ProjectInfo';
-import WelcomeComp from '../WelcomeComp/WelcomeComp';
-
-import {useState} from 'react';
+import TopNav from '../TopNav/TopNav';
 
 import './PhoneView.css';
 
 const PhoneView = () => {
-    const [showInfo, setShowInfo] = useState(false);
-    const [view, setView] = useState('home');
-
-    const handleShowInfo = () => {
-        setShowInfo(!showInfo);
-    }
-
-    const handleView = (selectedView = 'unknown') => {
-        switch(selectedView) {
-            case 'home':
-            case 'projects':
-                setView(selectedView);
-                break;
-            default:
-                setView('home');
-        }
-    }
-
-    const displayComp = () => {
-        switch(view) {
-            case 'home':
-                return <WelcomeComp className='welcome-cont'/>
-            case 'projects':
-                return <ProjectsComp onClickShowInfo={handleShowInfo}/>
-            default:
-                return <WelcomeComp className='welcome-cont'/>
-        }
-    }
+    const {showInfo, handleView, displayComp} = PhoneViewLogic();
 
     return (
         <div className='phone-view'>

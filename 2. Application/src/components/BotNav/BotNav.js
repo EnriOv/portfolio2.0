@@ -1,8 +1,8 @@
 import { FiLinkedin } from 'react-icons/fi';
+import IconDocument from './assets/IconDocument';
+import IconGithub from './assets/IconGithub';
 import IconHome from './assets/IconHome';
 import IconSuitcase from './assets/IconSuitcase';
-import IconGithub from './assets/IconGithub';
-import IconDocument from './assets/IconDocument';
 
 import './BotNav.css';
 

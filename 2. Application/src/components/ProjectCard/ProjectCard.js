@@ -8,7 +8,7 @@ const ProjectCard = (props) => {
 
     return (
         <div className='project-card'>
-            <div className='project-info'>
+            <div className='card-info' onClick={null}>
                 <h3 className='project-title'>Project Card</h3>
                 <p className='abstract'>Sunt voluptate deserunt pariatur cillum dolore ad aute esse elit non labore. Est qui cupidatat voluptate culpa minim dolore excepteur incididunt sunt qui ullamco irure. Dolore do irure qui cupidatat commodo tempor nostrud deserunt anim. Ullamco consectetur elit ex ut laborum ea dolor ea mollit.</p>
                 <div className='tags-section'>

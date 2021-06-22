@@ -35,4 +35,4 @@ ProjectCard.defaultProps = {
     activeButtons: {'demo': false, 'code': false}
 };
 
-export default ProjectCard
+export default ProjectCard;

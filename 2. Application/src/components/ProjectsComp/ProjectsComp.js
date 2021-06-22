@@ -2,7 +2,9 @@ import ProjectCard from '../ProjectCard/ProjectCard';
 
 import './ProjectsComp.css';
 
-const ProjectsComp = () => {
+const ProjectsComp = (props) => {
+    const {onClickShowInfo} = props;
+
     const projects = [
         {title: 'Project 1', 
         description: 'Lorem ipsum indiunt.', 
@@ -14,9 +16,9 @@ const ProjectsComp = () => {
         <div className='projects-view'>
             <h2 className='projects-title'>Projects</h2>
             <div className='projects-container'>
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
+                <ProjectCard onClickShowInfo={onClickShowInfo}/>
+                <ProjectCard onClickShowInfo={onClickShowInfo}/>
+                <ProjectCard onClickShowInfo={onClickShowInfo}/>
             </div>
         </div>
     )

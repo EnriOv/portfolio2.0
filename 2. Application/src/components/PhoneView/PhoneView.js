@@ -1,27 +1,23 @@
 import BotNav from '../BotNav/BotNav';
-import TopNav from '../TopNav/TopNav';
-import ProjectsComp from '../ProjectsComp/ProjectsComp';
+import PhoneViewLogic from './PhoneViewLogic';
 import ProjectInfo from '../ProjectInfo/ProjectInfo';
-import WelcomeComp from "../WelcomeComp/WelcomeComp";
-
-import {useState} from 'react';
+import TopNav from '../TopNav/TopNav';
 
 import './PhoneView.css';
 
 const PhoneView = () => {
-    const [showInfo, setShowInfo] = useState(false);
-
-    const handleShowInfo = () => {
-        setShowInfo(!showInfo);
-    }
+    const {showInfo, handleShowInfo, handleView, displayComp} = PhoneViewLogic();
 
     return (
         <div className='phone-view'>
             <TopNav className='topnav-cont'/>
-            {/* <WelcomeComp className='welcome-cont'/> */}
-            <ProjectsComp onClickShowInfo={handleShowInfo}/>
-            {showInfo && <ProjectInfo source={'images/twitter-desk.png'} />}
-            <BotNav className='botnav-cont'/>
+            { displayComp() }
+            {showInfo && 
+                <ProjectInfo 
+                    source={'images/twitter-desk.png'}
+                    closeInfo={handleShowInfo}
+                />}
+            <BotNav className='botnav-cont' onSelectView={handleView}/>
         </div>
     )
 }

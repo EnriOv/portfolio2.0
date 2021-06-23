@@ -8,9 +8,25 @@
   flex-direction: column;
 }
 
+.ret-but-cont {
+  display: flex;
+  margin: 1em 0 1em 3em;
+}
+
+.return-but {
+  padding-top: 0.2em;
+  border: solid;
+  border-width: 2px;
+  border-radius: 100px;
+  flex-basis: 3em;
+  height: 3em;
+  cursor: pointer;
+  text-align: center;
+}
+
 .project-img {
   width: 100%;
-  margin: 4em 0 1em;
+  margin-bottom: 1em;
 }
 
 .title {

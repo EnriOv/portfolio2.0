@@ -6,13 +6,17 @@ import TopNav from '../TopNav/TopNav';
 import './PhoneView.css';
 
 const PhoneView = () => {
-    const {showInfo, handleView, displayComp} = PhoneViewLogic();
+    const {showInfo, handleShowInfo, handleView, displayComp} = PhoneViewLogic();
 
     return (
         <div className='phone-view'>
             <TopNav className='topnav-cont'/>
             { displayComp() }
-            {showInfo && <ProjectInfo source={'images/twitter-desk.png'} />}
+            {showInfo && 
+                <ProjectInfo 
+                    source={'images/twitter-desk.png'}
+                    closeInfo={handleShowInfo}
+                />}
             <BotNav className='botnav-cont' onSelectView={handleView}/>
         </div>
     )

@@ -1,0 +1,11 @@
+.desktop-view {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.desk-topnav {
+  grid-area: 1 / 1 / 2 / 2;
+}

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
+import DesktopView from './components/DesktopView/DesktopView';
 import PhoneView from './components/PhoneView/PhoneView';
 import ProjectCard from './components/ProjectCard/ProjectCard';
-import TopNav from './components/TopNav/TopNav';
 
 const AppLogic = () => {
     const [displayType, setdisplayType] = useState('unknown');
@@ -33,7 +33,7 @@ const AppLogic = () => {
     const checkDisplayType = () => {
         switch(displayType) {
             case 'desktop':
-                return <TopNav />
+                return <DesktopView />
             case 'phone':
                 return <PhoneView />
             default:

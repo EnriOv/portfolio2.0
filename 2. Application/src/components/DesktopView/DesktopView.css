@@ -8,10 +8,18 @@
 
 .desc-cont {
   grid-area: 1 / 1 / 2 / 2;
-}
+  display: flex;
+  flex-direction: column;
 
-.desk-topnav {
+  /* Blurred background */
+  background: rgba(255, 255, 255, 0.096);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .desk-welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
 }

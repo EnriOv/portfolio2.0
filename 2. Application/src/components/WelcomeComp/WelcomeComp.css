@@ -28,6 +28,30 @@
   align-items: center;
 }
 
+.desk-but-cont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.desk-but {
+  font-size: 1rem;
+  border-top: solid 1px;
+  cursor: pointer;
+  padding: 0.5em 0;
+  font-weight: 600;
+  width: 100%;
+}
+
+.desk-but a {
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+#resume-but {
+  border-bottom: solid 1px;
+}
+
 .projects-but {
   width: auto;
   margin-bottom: 1em;

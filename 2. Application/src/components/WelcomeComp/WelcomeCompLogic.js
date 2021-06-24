@@ -36,10 +36,22 @@ const WelcomeCompLogic = (props) => {
             case 'desktop':
                 console.log('desktop-view')
                 return (
-                    <div className='but-container'>
-                        <button className='but'>Github</button>
-                        <button className='but'>LinkedIn</button>
-                        <button className='but'>Resume</button>
+                    <div className='desk-but-cont'>
+                        <a href='https://github.com/' target='none' title='GitHub'>
+                            <button className='but desk-but'>
+                                Github
+                            </button>
+                        </a>
+                        <a href='https://linkedin.com/' target='none' title='LinkedIn'>
+                            <button className='but desk-but'>
+                                LinkedIn
+                            </button>
+                        </a>
+                        <a href='https://www.google.com/intl/en_us/docs/about/' target='none' title='Resume'>
+                            <button className='but desk-but' id='resume-but'>
+                                Resume
+                            </button>
+                        </a>
                     </div>
                 );
             default:

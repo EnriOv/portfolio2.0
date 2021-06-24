@@ -4,12 +4,14 @@ import WelcomeComp from '../WelcomeComp/WelcomeComp';
 
 import './DesktopView.css';
 
-const DesktopView = () => {
+const DesktopView = (props) => {
+    const {displayType} = props;
+
     return (
         <div className='desktop-view'>
             <div className='desc-cont'>
                 <TopNav className='desk-topnav'/>
-                <WelcomeComp className='welcome-cont'/>
+                <WelcomeComp className='desk-welcome' displayType={displayType}/>
             </div>
             
             

@@ -33,9 +33,9 @@ const AppLogic = () => {
     const checkDisplayType = () => {
         switch(displayType) {
             case 'desktop':
-                return <DesktopView />
+                return <DesktopView displayType={displayType}/>
             case 'phone':
-                return <PhoneView />
+                return <PhoneView displayType={displayType}/>
             default:
                 return <ProjectCard />
         }

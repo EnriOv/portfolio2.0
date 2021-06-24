@@ -3,7 +3,8 @@ import {useState} from 'react';
 import ProjectsComp from '../ProjectsComp/ProjectsComp';
 import WelcomeComp from '../WelcomeComp/WelcomeComp';
 
-const PhoneViewLogic = () => {
+const PhoneViewLogic = (props) => {
+    const {displayType} = props;
     const [showInfo, setShowInfo] = useState(false);
     const [view, setView] = useState('home');
 
@@ -45,7 +46,10 @@ const PhoneViewLogic = () => {
     const displayComp = () => {
         switch(view) {
             case 'home':
-                return <WelcomeComp className='welcome-cont' onClickProjects={handleProjBut}/>
+                return <WelcomeComp 
+                        className='welcome-cont' 
+                        onClickProjects={handleProjBut}
+                        displayType={displayType}/>
             case 'projects':
                 return <ProjectsComp onClickShowInfo={handleShowInfo}/>
             default:

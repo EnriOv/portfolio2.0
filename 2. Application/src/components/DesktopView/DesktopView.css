@@ -6,6 +6,12 @@
   height: 100%;
 }
 
-.desk-topnav {
+.desc-cont {
   grid-area: 1 / 1 / 2 / 2;
+}
+
+.desk-topnav {
+}
+
+.desk-welcome {
 }

@@ -5,8 +5,8 @@ import TopNav from '../TopNav/TopNav';
 
 import './PhoneView.css';
 
-const PhoneView = () => {
-    const {showInfo, handleShowInfo, handleView, displayComp} = PhoneViewLogic();
+const PhoneView = (props) => {
+    const {showInfo, handleShowInfo, handleView, displayComp} = PhoneViewLogic(props);
 
     return (
         <div className='phone-view'>

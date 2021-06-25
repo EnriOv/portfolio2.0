@@ -3,10 +3,10 @@ import {FaChevronLeft} from 'react-icons/fa';
 import './ProjectInfo.css';
 
 const ProjectInfo = (props) => {
-    const {source, closeInfo} = props;
+    const {className, source, closeInfo} = props;
 
     return (
-        <div className='project-info'>
+        <div className={className}>
             <div className='information'>
                 <div className='ret-but-cont'>
                     <button className='but return-but' onClick={closeInfo}>

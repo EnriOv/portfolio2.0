@@ -1,3 +1,4 @@
+import ProjectsComp from '../ProjectsComp/ProjectsComp';
 import ProjectInfo from '../ProjectInfo/ProjectInfo';
 import TopNav from '../TopNav/TopNav';
 import WelcomeComp from '../WelcomeComp/WelcomeComp';
@@ -13,8 +14,13 @@ const DesktopView = (props) => {
                 <TopNav className='desk-topnav'/>
                 <WelcomeComp className='desk-welcome' displayType={displayType}/>
             </div>
-            
-            
+            <div className='proj-cont'>
+                <ProjectsComp />
+            </div>
+            <ProjectInfo 
+                className={'info-cont'}
+                source={'images/twitter-desk.png'}
+            />
         </div>
     )
 }

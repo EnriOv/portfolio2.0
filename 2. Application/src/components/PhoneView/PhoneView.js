@@ -14,6 +14,7 @@ const PhoneView = (props) => {
             { displayComp() }
             {showInfo && 
                 <ProjectInfo 
+                    className={'project-info'}
                     source={'images/twitter-desk.png'}
                     closeInfo={handleShowInfo}
                 />}

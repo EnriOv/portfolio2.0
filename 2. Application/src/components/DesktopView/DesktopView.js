@@ -20,6 +20,7 @@ const DesktopView = (props) => {
             <ProjectInfo 
                 className={'info-cont'}
                 source={'images/twitter-desk.png'}
+                displayType={displayType}
             />
         </div>
     )

@@ -24,4 +24,8 @@ const ProjectsComp = (props) => {
     )
 }
 
+ProjectsComp.defaultProps = {
+    onClickShowInfo: null
+}
+
 export default ProjectsComp;

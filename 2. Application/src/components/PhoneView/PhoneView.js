@@ -16,7 +16,7 @@ const PhoneView = (props) => {
                 <ProjectInfo 
                     className={'project-info'}
                     source={'images/twitter-desk.png'}
-                    closeInfo={handleShowInfo}
+                    showInfo={handleShowInfo}
                     displayType={props.displayType}
                 />}
             <BotNav className='botnav-cont' onSelectView={handleView}/>

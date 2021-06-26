@@ -22,6 +22,7 @@ const DesktopView = (props) => {
                 source={'images/twitter-desk.png'}
                 displayType={displayType}
             />
+            
         </div>
     )
 }

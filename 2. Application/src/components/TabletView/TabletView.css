@@ -1,0 +1,51 @@
+.tablet-view {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: auto;
+  height: 100%;
+}
+
+.tablet-topnav {
+  grid-area: 1 / 1 / 2 / 2;
+  z-index: 1;
+}
+
+.tablet-desc {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  overflow-y: auto;
+
+  /* Blurred background */
+  background: rgba(255, 255, 255, 0.096);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.tablet-welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.tablet-proj {
+  grid-area: 1 / 2 / 2 / 3;
+  overflow-y: scroll;
+  max-height: 100%;
+  padding-top: 1.5em;
+}
+
+.tablet-proj-info {
+  grid-area: 1 / 2 / 2 / 3;
+  align-self: top;
+  padding: 0;
+  z-index: 3;
+  overflow-y: scroll;
+
+  /* Blurred background */
+  background: rgba(255, 255, 255, 0.096);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}

@@ -1,14 +1,17 @@
+import ProjectCardLogic from './ProjectCardLogic';
+
 import './ProjectCard.css'
 
 const ProjectCard = (props) => {
-    const {activeButtons, onClickShowInfo} = props;
+    const {activeButtons} = props;
+    const {checkFunct} = ProjectCardLogic(props);
 
     const classDemo = activeButtons.demo ? 'but but-demo active' : 'but but-demo disable';
     const classCode = activeButtons.code ? 'but but-code active' : 'but but-code disable';
 
     return (
         <div className='project-card'>
-            <div className='card-info' onClick={() => onClickShowInfo()}>
+            <div className='card-info' onClick={checkFunct()}>
                 <h3 className='project-title'>Project Card</h3>
                 <p className='abstract'>Sunt voluptate deserunt pariatur cillum dolore ad aute esse elit non labore. Est qui cupidatat voluptate culpa minim dolore excepteur incididunt sunt qui ullamco irure. Dolore do irure qui cupidatat commodo tempor nostrud deserunt anim. Ullamco consectetur elit ex ut laborum ea dolor ea mollit.</p>
                 <div className='tags-section'>

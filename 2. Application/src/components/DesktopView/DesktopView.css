@@ -1,0 +1,40 @@
+.desktop-view {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr;
+  grid-template-rows: auto;
+  height: 100%;
+}
+
+.desc-cont {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  overflow-y: auto;
+
+  /* Blurred background */
+  background: rgba(255, 255, 255, 0.096);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.desk-welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.proj-cont {
+  grid-area: 1 / 2 / 2 / 3;
+  overflow-y: scroll;
+  max-height: 100%;
+  padding-top: 1.5em;
+}
+
+.info-cont {
+  grid-area: 1 / 3 / 2 / 4;
+  overflow-y: auto;
+  max-height: 100%;
+  padding-top: 4.5em;
+}

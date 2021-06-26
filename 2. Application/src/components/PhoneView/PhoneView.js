@@ -5,8 +5,8 @@ import TopNav from '../TopNav/TopNav';
 
 import './PhoneView.css';
 
-const PhoneView = () => {
-    const {showInfo, handleShowInfo, handleView, displayComp} = PhoneViewLogic();
+const PhoneView = (props) => {
+    const {showInfo, handleShowInfo, handleView, displayComp} = PhoneViewLogic(props);
 
     return (
         <div className='phone-view'>
@@ -14,8 +14,10 @@ const PhoneView = () => {
             { displayComp() }
             {showInfo && 
                 <ProjectInfo 
+                    className={'project-info'}
                     source={'images/twitter-desk.png'}
-                    closeInfo={handleShowInfo}
+                    showInfo={handleShowInfo}
+                    displayType={props.displayType}
                 />}
             <BotNav className='botnav-cont' onSelectView={handleView}/>
         </div>

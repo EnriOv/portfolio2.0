@@ -33,6 +33,7 @@ const WelcomeCompLogic = (props) => {
                         <button className='but projects-but' onClick={() => onClickProjects()}>PROJECTS</button>
                     </div>
                 );
+            case 'tablet':
             case 'desktop':
                 console.log('desktop-view')
                 return (

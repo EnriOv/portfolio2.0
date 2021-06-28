@@ -1,11 +1,16 @@
-.desktop-view {
+.tablet-view {
   display: grid;
-  grid-template-columns: 1fr 1.5fr 1.5fr;
+  grid-template-columns: 1fr 1.5fr;
   grid-template-rows: auto;
   height: 100%;
 }
 
-.desc-cont {
+.tablet-topnav {
+  grid-area: 1 / 1 / 2 / 2;
+  z-index: 1;
+}
+
+.tablet-desc {
   grid-area: 1 / 1 / 2 / 2;
   display: flex;
   flex-direction: column;
@@ -18,43 +23,29 @@
   -webkit-backdrop-filter: blur(12px);
 }
 
-.desk-welcome {
+.tablet-welcome {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
 }
 
-.proj-cont {
+.tablet-proj {
   grid-area: 1 / 2 / 2 / 3;
   overflow-y: scroll;
   max-height: 100%;
   padding-top: 1.5em;
 }
 
-.info-cont {
-  grid-area: 1 / 3 / 2 / 4;
-  overflow-y: auto;
-  max-height: 100%;
-  padding-top: 4.5em;
-}
+.tablet-proj-info {
+  grid-area: 1 / 2 / 2 / 3;
+  align-self: top;
+  padding: 0;
+  z-index: 3;
+  overflow-y: scroll;
 
-@media only screen and (min-width: 2000px) {
-  .proj-cont {
-    padding-top: 3em;
-  }
-
-  .info-cont {
-    padding-top: 7.2em;
-  }
-}
-
-@media only screen and (min-width: 3000px) {
-  .proj-cont {
-    padding-top: 3em;
-  }
-
-  .info-cont {
-    padding-top: 8.8em;
-  }
+  /* Blurred background */
+  background: rgba(255, 255, 255, 0.096);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }

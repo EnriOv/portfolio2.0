@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import DesktopView from './components/DesktopView/DesktopView';
 import PhoneView from './components/PhoneView/PhoneView';
 import ProjectCard from './components/ProjectCard/ProjectCard';
+import TabletView from './components/TabletView/TabletView';
 
 const AppLogic = () => {
     const [displayType, setdisplayType] = useState('unknown');
@@ -20,9 +21,13 @@ const AppLogic = () => {
     })
 
     const checkWindowSize = () => {
-        if(window.innerWidth > 992) {
+        if(window.innerWidth > 1200) {
             setdisplayType('desktop');
             return 'desktop';
+        }
+        if(window.innerWidth >= 992 && window.innerWidth <= 1200) {
+            setdisplayType('tablet');
+            return 'tablet';
         }
         if(window.innerWidth < 992) {
             setdisplayType('phone');
@@ -34,8 +39,10 @@ const AppLogic = () => {
         switch(displayType) {
             case 'desktop':
                 return <DesktopView displayType={displayType}/>
+            case 'tablet':
+                return <TabletView displayType={displayType}/>
             case 'phone':
-                return <PhoneView displayType={displayType}/>
+                return <PhoneView displayType={displayType} />
             default:
                 return <ProjectCard />
         }

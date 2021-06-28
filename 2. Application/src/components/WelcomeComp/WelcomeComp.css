@@ -80,3 +80,50 @@
     line-height: 1.4em;
   }
 }
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .presentation {
+    font-size: 1.3rem;
+    line-height: 1.4em;
+    padding: 0 1.2em;
+  }
+
+  .desk-but {
+    font-size: 1.3rem;
+    padding: 0.6em 0;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .main-draw {
+    height: 20em;
+  }
+
+  .presentation {
+    font-size: 1.7rem;
+    line-height: 1.4em;
+    padding: 0 1em;
+  }
+
+  .desk-but {
+    font-size: 1.7rem;
+    padding: 0.6em 0;
+  }
+}
+
+@media only screen and (min-width: 3000px) {
+  .main-draw {
+    height: 25em;
+  }
+
+  .presentation {
+    font-size: 2rem;
+    line-height: 1.4em;
+    padding: 0 1em;
+  }
+
+  .desk-but {
+    font-size: 2rem;
+    padding: 0.6em 0;
+  }
+}

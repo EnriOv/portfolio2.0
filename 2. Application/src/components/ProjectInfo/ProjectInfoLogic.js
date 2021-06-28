@@ -4,7 +4,7 @@ const ProjectInfoLogic = (props) => {
     const {displayType, showInfo} = props;
 
     const showReturnButton = () => {
-        if(displayType == 'phone' || displayType == 'tablet') {
+        if(displayType === 'phone' || displayType === 'tablet') {
             return (
                 <div className='ret-but-cont'>
                     <button className='but return-but' onClick={showInfo}>

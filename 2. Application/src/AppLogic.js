@@ -25,7 +25,7 @@ const AppLogic = () => {
             setdisplayType('desktop');
             return 'desktop';
         }
-        if(window.innerWidth > 992 && window.innerWidth <= 1200) {
+        if(window.innerWidth >= 992 && window.innerWidth <= 1200) {
             setdisplayType('tablet');
             return 'tablet';
         }

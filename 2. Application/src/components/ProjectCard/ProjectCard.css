@@ -153,3 +153,88 @@
     font-size: 0.75rem;
   }
 }
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .but {
+    font-size: 0.85rem;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  .abstract {
+    font-size: 1rem;
+  }
+
+  .tags-section {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .project-card {
+    border: 3px solid var(--main-color);
+  }
+
+  .but {
+    font-size: 1.2rem;
+  }
+
+  .but-demo {
+    border-bottom: 3px solid var(--main-color);
+    border-left: 3px solid var(--main-color);
+  }
+
+  .but-code {
+    border-left: 3px solid var(--main-color);
+  }
+
+  .project-title {
+    font-size: 1.6rem;
+  }
+
+  .abstract {
+    font-size: 1.3rem;
+  }
+
+  .tags-section {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 3000px) {
+  .project-card {
+    border: 3.5px solid var(--main-color);
+    border-radius: 15px;
+  }
+
+  .card-info {
+    padding: 2em;
+  }
+
+  .but {
+    font-size: 1.6rem;
+  }
+
+  .but-demo {
+    border-bottom: 3.5px solid var(--main-color);
+    border-left: 3.5px solid var(--main-color);
+  }
+
+  .but-code {
+    border-left: 3.5px solid var(--main-color);
+  }
+
+  .project-title {
+    font-size: 2.2rem;
+  }
+
+  .abstract {
+    font-size: 1.6rem;
+  }
+
+  .tags-section {
+    font-size: 1.6rem;
+  }
+}

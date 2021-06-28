@@ -38,3 +38,23 @@
   max-height: 100%;
   padding-top: 4.5em;
 }
+
+@media only screen and (min-width: 2000px) {
+  .proj-cont {
+    padding-top: 3em;
+  }
+
+  .info-cont {
+    padding-top: 7.2em;
+  }
+}
+
+@media only screen and (min-width: 3000px) {
+  .proj-cont {
+    padding-top: 3em;
+  }
+
+  .info-cont {
+    padding-top: 8.8em;
+  }
+}

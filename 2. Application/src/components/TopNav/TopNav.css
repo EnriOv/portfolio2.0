@@ -11,6 +11,10 @@
   margin: 1.5em;
 }
 
+.toggle-but {
+  display: flex;
+}
+
 .site-name {
   margin: 0;
   color: var(--main-color);
@@ -23,6 +27,7 @@
   color: var(--toggle-color);
   font-size: 1rem;
   margin: 0 0.2em;
+  bottom: 50px;
 }
 
 /* The switch - the box around the slider */
@@ -30,7 +35,7 @@
   position: relative;
   display: inline-block;
   width: 2em;
-  height: 1.3em;
+  height: 1.35em;
 }
 
 /* Hide default HTML checkbox */
@@ -89,4 +94,56 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+@media only screen and (min-width: 2000px) {
+  :root {
+    --slider-translate: 0.8em;
+    --slider-size: 1.4em;
+  }
+
+  .topnav {
+    margin: 1.8em;
+    padding-top: 1em;
+  }
+
+  .site-name {
+    font-size: 2.2rem;
+  }
+
+  .toggle-icons {
+    font-size: 1.6rem;
+  }
+
+  /* The switch - the box around the slider */
+  .switch {
+    width: 3em;
+    height: 2em;
+  }
+}
+
+@media only screen and (min-width: 3000px) {
+  :root {
+    --slider-translate: 1.1em;
+    --slider-size: 1.6em;
+  }
+
+  .topnav {
+    margin: 1.8em;
+    padding-top: 1em;
+  }
+
+  .site-name {
+    font-size: 2.7rem;
+  }
+
+  .toggle-icons {
+    font-size: 2.2rem;
+  }
+
+  /* The switch - the box around the slider */
+  .switch {
+    width: 3.5em;
+    height: 2.2em;
+  }
 }

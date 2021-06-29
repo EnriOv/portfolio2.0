@@ -1,5 +1,5 @@
 const ProjectCardLogic = (props) => {
-    const {onClickShowInfo} = props;
+    const {tags, onClickShowInfo} = props;
 
     /* 
         Function to check if the onClickShowInfo callback has a function to execute
@@ -12,7 +12,24 @@ const ProjectCardLogic = (props) => {
         }
     }
 
-    return {checkFunct}
+    /*
+        Function returns the tags of the project
+    */
+    const returnTags = () => {
+        return (
+            <>
+            {
+            tags.map((tag) => {
+                return (
+                    <div className='tag'>{tag}</div>
+                );
+                })
+            }
+            </>
+        );
+    }
+
+    return {checkFunct, returnTags}
 }
 
 export default ProjectCardLogic;

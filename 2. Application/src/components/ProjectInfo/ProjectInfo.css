@@ -75,15 +75,17 @@
   text-align: center;
 }
 
-.disable {
+.info-disable {
   color: var(--disable-color);
 }
 
-.active:hover {
+.info-active:hover {
   cursor: pointer;
   color: var(--backg-color);
   background-color: var(--main-color);
 }
+
+/* Tablet screen size */
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .title {
@@ -99,14 +101,16 @@
   }
 
   .tags-project {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .but-pro {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     flex-basis: 7em;
   }
 }
+
+/* Large screen sizes */
 
 @media only screen and (min-width: 2000px) {
   .title {

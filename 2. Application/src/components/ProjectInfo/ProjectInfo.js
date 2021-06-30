@@ -6,8 +6,8 @@ const ProjectInfo = (props) => {
     const {className, project} = props;
     const {showReturnButton, returnTags, returnDescription} = ProjectInfoLogic(props);
 
-    const classDemo = project.demo !== null ? 'but but-pro active' : 'but but-pro disable';
-    const classCode = project.code !== null ? 'but but-pro active' : 'but but-pro disable';
+    const classDemo = project.demo !== null ? 'but but-pro info-active' : 'but but-pro info-disable';
+    const classCode = project.code !== null ? 'but but-pro info-active' : 'but but-pro info-disable';
 
     return (
         <div className={className}>

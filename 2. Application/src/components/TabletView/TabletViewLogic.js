@@ -1,17 +1,21 @@
-import {useState} from 'react';
+import {useState, useContext} from 'react';
+
+import ProjectsContext from '../../context/ProjectsContext';
 
 const TabletViewLogic = (props) => {
-    const [showInfo, setshowInfo] = useState(false);
+    const [showInfo, setshowInfo] = useState({show: false, id: 0});
     
+    const data = useContext(ProjectsContext);
+
     /* 
         Function handles the option to display the information of a selected
-        project from the list of projects. Used in the 'ProjectsComp' component.
+        project from the list of projects. Used in the 'ProjectsComp' component
     */
-    const handleShowInfo = () => {
-        setshowInfo(!showInfo);
+    const handleShowInfo = (setId = 0) => {
+        setshowInfo({show: !showInfo.show, id: setId});
     }
 
-    return {showInfo, handleShowInfo}
+    return {data, showInfo, handleShowInfo}
 }
 
 export default TabletViewLogic;

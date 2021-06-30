@@ -70,12 +70,17 @@
   border-radius: 5px;
   border-width: 1px;
   border-color: var(--main-color);
-  cursor: pointer;
   padding: 0.5em 0;
   flex-basis: 6em;
+  text-align: center;
 }
 
-.but-pro:hover {
+.disable {
+  color: var(--disable-color);
+}
+
+.active:hover {
+  cursor: pointer;
   color: var(--backg-color);
   background-color: var(--main-color);
 }

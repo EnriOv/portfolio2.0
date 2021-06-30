@@ -1,16 +1,5 @@
 const ProjectCardLogic = (props) => {
-    const {tags, onClickShowInfo} = props;
-
-    /* 
-        Function to check if the onClickShowInfo callback has a function to execute
-    */
-    const checkFunct = () => {
-        if(onClickShowInfo != null) {
-            return(
-                onClickShowInfo
-            );
-        }
-    }
+    const {tags} = props;
 
     /*
         Function returns the tags of the project
@@ -29,7 +18,7 @@ const ProjectCardLogic = (props) => {
         );
     }
 
-    return {checkFunct, returnTags}
+    return {returnTags}
 }
 
 export default ProjectCardLogic;

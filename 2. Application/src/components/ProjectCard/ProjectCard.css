@@ -1,5 +1,5 @@
 :root {
-  --disbable-color: #e8e8e860;
+  --disable-color: #e8e8e860;
 }
 
 .project-card {
@@ -22,7 +22,7 @@
 }
 
 .disable {
-  color: var(--disbable-color);
+  color: var(--disable-color);
 }
 
 .but span {

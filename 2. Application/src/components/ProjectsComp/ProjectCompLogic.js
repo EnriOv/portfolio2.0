@@ -19,6 +19,7 @@ const ProjectCompLogic = (props) => {
                 return (
                     <ProjectCard 
                         key={project.id}
+                        id={project.id}
                         title={project.title}
                         abstract={project.abstract}
                         tags={project.tags}

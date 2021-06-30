@@ -1,19 +1,22 @@
-import {useState} from 'react';
+import {useState, useContext} from 'react';
 
 import ProjectsComp from '../ProjectsComp/ProjectsComp';
+import ProjectsContext from '../../context/ProjectsContext';
 import WelcomeComp from '../WelcomeComp/WelcomeComp';
 
 const PhoneViewLogic = (props) => {
     const {displayType} = props;
-    const [showInfo, setShowInfo] = useState(false);
+    const [showInfo, setShowInfo] = useState({show: false, id: 0});
     const [view, setView] = useState('home');
+
+    const data = useContext(ProjectsContext);
 
     /* 
         Function handles the option to display the information of a selected
         project from the list of projects. Used in the 'ProjectsComp' component.
     */
-    const handleShowInfo = () => {
-        setShowInfo(!showInfo);
+    const handleShowInfo = (setId = 0) => {
+        setShowInfo({show: !showInfo.show, id: setId});
     }
 
     /* 
@@ -51,13 +54,13 @@ const PhoneViewLogic = (props) => {
                         onClickProjects={handleProjBut}
                         displayType={displayType}/>
             case 'projects':
-                return <ProjectsComp onClickShowInfo={handleShowInfo}/>
+                return <ProjectsComp onClickShowInfo={handleShowInfo} />
             default:
                 return <h2>Error</h2>
         }
     }
 
-    return {showInfo, handleShowInfo, handleView, displayComp}
+    return {data, showInfo, handleShowInfo, handleView, displayComp}
 }
 
 export default PhoneViewLogic;

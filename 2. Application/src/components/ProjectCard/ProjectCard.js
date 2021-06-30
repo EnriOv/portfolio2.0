@@ -3,15 +3,15 @@ import ProjectCardLogic from './ProjectCardLogic';
 import './ProjectCard.css'
 
 const ProjectCard = (props) => {
-    const {title, abstract, demoUrl, codeUrl} = props;
-    const {checkFunct, returnTags} = ProjectCardLogic(props);
+    const {id, title, abstract, demoUrl, codeUrl, onClickShowInfo} = props;
+    const {returnTags} = ProjectCardLogic(props);
 
     const classDemo = demoUrl !== null ? 'but but-demo active' : 'but but-demo disable';
     const classCode = codeUrl !== null ? 'but but-code active' : 'but but-code disable';
 
     return (
         <div className='project-card'>
-            <div className='card-info' onClick={checkFunct()}>
+            <div className='card-info' onClick={() => onClickShowInfo(id)}>
                 <h3 className='project-title'>{title}</h3>
                 <p className='abstract'>{abstract}</p>
                 <div className='tags-section'>
@@ -48,6 +48,7 @@ ProjectCard.defaultProps = {
     tags: [],
     codeUrl: null,
     demoUrl: null,
+    onClickShowInfo: () => {}
 };
 
 export default ProjectCard;

@@ -23,7 +23,6 @@ const TabletView = (props) => {
             {showInfo && 
                 <ProjectInfo 
                     className={'tablet-proj-info'}
-                    source={'images/twitter-desk.png'}
                     showInfo={handleShowInfo}
                     displayType={displayType}/>
             }

@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
 
 import DesktopView from './components/DesktopView/DesktopView';
+import Page404 from './components/Page404/Page404';
 import PhoneView from './components/PhoneView/PhoneView';
-import ProjectCard from './components/ProjectCard/ProjectCard';
 import PuffLoader from 'react-spinners/PuffLoader';
 import TabletView from './components/TabletView/TabletView';
 
 const AppLogic = () => {
     const [data, setData] = useState([]);
-    const [displayType, setdisplayType] = useState('unknown');
-    const [loading, setLoading] = useState(true)
+    const [displayType, setdisplayType] = useState('loading');
 
     useEffect(() => {
-        removeLoadingScreen();
+        setdisplayType(checkWindowSize());
+        getData();
     }, [])
 
     useEffect(() => {
@@ -22,12 +22,6 @@ const AppLogic = () => {
             window.removeEventListener('resize', checkWindowSize);
         }
     })
-
-    const removeLoadingScreen = async () => {
-        await setdisplayType(checkWindowSize());
-        await getData();
-        setLoading(false);
-    }
 
     const getData=()=>{
         fetch('projects.json'
@@ -67,15 +61,21 @@ const AppLogic = () => {
             case 'desktop':
                 return <DesktopView displayType={displayType}/>
             case 'tablet':
-                return <TabletView displayType={displayType}/>
+                return <TabletView displayType={displayType} />
             case 'phone':
                 return <PhoneView displayType={displayType} />
+            case 'loading':
+                return (
+                <div className='loader'>
+                    <PuffLoader size={'10em'} color={'#c7e9ff'} loading={true}/>
+                    <h1 className='loading-title'>LOADING</h1>
+                </div>);
             default:
-                return <ProjectCard />
+                return <Page404 />
         }
     }
 
-    return { data, loading, PuffLoader, checkDisplayType }
+    return { data, checkDisplayType }
 }
 
 export default AppLogic;

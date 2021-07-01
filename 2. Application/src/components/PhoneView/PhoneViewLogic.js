@@ -1,4 +1,4 @@
-import {useState, useEffect, useContext} from 'react';
+import {useState, useContext} from 'react';
 
 import ProjectsComp from '../ProjectsComp/ProjectsComp';
 import ProjectsContext from '../../context/ProjectsContext';

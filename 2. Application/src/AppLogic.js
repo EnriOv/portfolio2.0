@@ -3,16 +3,16 @@ import { useState, useEffect } from 'react';
 import DesktopView from './components/DesktopView/DesktopView';
 import PhoneView from './components/PhoneView/PhoneView';
 import ProjectCard from './components/ProjectCard/ProjectCard';
+import PuffLoader from 'react-spinners/PuffLoader';
 import TabletView from './components/TabletView/TabletView';
 
 const AppLogic = () => {
     const [data, setData] = useState([]);
     const [displayType, setdisplayType] = useState('unknown');
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        setdisplayType(checkWindowSize());
-        getData();
-
+        removeLoadingScreen();
     }, [])
 
     useEffect(() => {
@@ -22,6 +22,12 @@ const AppLogic = () => {
             window.removeEventListener('resize', checkWindowSize);
         }
     })
+
+    const removeLoadingScreen = async () => {
+        await setdisplayType(checkWindowSize());
+        await getData();
+        setLoading(false);
+    }
 
     const getData=()=>{
         fetch('projects.json'
@@ -69,7 +75,7 @@ const AppLogic = () => {
         }
     }
 
-    return { data, checkDisplayType }
+    return { data, loading, PuffLoader, checkDisplayType }
 }
 
 export default AppLogic;

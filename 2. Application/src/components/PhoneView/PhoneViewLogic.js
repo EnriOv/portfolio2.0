@@ -1,4 +1,4 @@
-import {useState, useContext} from 'react';
+import {useState, useEffect, useContext} from 'react';
 
 import ProjectsComp from '../ProjectsComp/ProjectsComp';
 import ProjectsContext from '../../context/ProjectsContext';
@@ -13,7 +13,7 @@ const PhoneViewLogic = (props) => {
 
     /* 
         Function handles the option to display the information of a selected
-        project from the list of projects. Used in the 'ProjectsComp' component.
+        project from the list of projects. Used in the 'ProjectsComp' component
     */
     const handleShowInfo = (setId = 0) => {
         setShowInfo({show: !showInfo.show, id: setId});
@@ -21,7 +21,7 @@ const PhoneViewLogic = (props) => {
 
     /* 
         Function utilized in 'BotNav' component used to select view depending 
-        on the selection in the bottom nav bar.
+        on the selection in the bottom nav bar
     */
     const handleView = (selectedView = 'unknown') => {
         switch(selectedView) {
@@ -36,7 +36,7 @@ const PhoneViewLogic = (props) => {
 
     /* 
         Function used to display list of projects using the button located in 
-        the 'WelcomeComp' component.
+        the 'WelcomeComp' component
     */
     const handleProjBut = () => {
         setView('projects');
@@ -44,7 +44,7 @@ const PhoneViewLogic = (props) => {
 
     /* 
         Function handles which component to display between the homepage and 
-        projects view. Used in the 'PhoneView' component.
+        projects view. Used in the 'PhoneView' component
     */
     const displayComp = () => {
         switch(view) {

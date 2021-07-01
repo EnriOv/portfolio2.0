@@ -34,4 +34,16 @@ const ProjectInfo = (props) => {
     )
 }
 
+ProjectInfo.defaultProps = {
+    project: {
+        title: "Select a project to display",
+        description: "To check a project click on a card and all the information will be displayed in this section.",
+        subtitle: [],
+        details: [],
+        demo: null,
+        code: null,
+        tags: []
+    }
+}
+
 export default ProjectInfo;

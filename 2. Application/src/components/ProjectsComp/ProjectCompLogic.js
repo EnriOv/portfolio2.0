@@ -4,7 +4,7 @@ import ProjectCard from '../ProjectCard/ProjectCard';
 import ProjectsContext from '../../context/ProjectsContext';
 
 const ProjectCompLogic = (props) => {
-    const {onClickShowInfo} = props;
+    const {currentId, onClickShowInfo} = props;
 
     const data = useContext(ProjectsContext);
 
@@ -26,6 +26,7 @@ const ProjectCompLogic = (props) => {
                         codeUrl={project.code}
                         demoUrl={project.demo}
                         onClickShowInfo={onClickShowInfo}
+                        currentId={currentId}
                     />
                 );}
             )}

@@ -9,7 +9,9 @@ import './TabletView.css';
 
 const TabletView = (props) => {
     const {displayType} = props;
-    const {showInfo, handleShowInfo} = TabletViewLogic();
+    const {data, showInfo, handleShowInfo} = TabletViewLogic();
+
+    const project = data.filter((project) => {return project.id === showInfo.id && project});
 
     return (
         <div className='tablet-view'>
@@ -20,12 +22,12 @@ const TabletView = (props) => {
             <div className='tablet-proj'>
                 <ProjectsComp onClickShowInfo={handleShowInfo}/>
             </div>
-            {showInfo && 
+            {showInfo.show && 
                 <ProjectInfo 
                     className={'tablet-proj-info'}
-                    source={'images/twitter-desk.png'}
                     showInfo={handleShowInfo}
-                    displayType={displayType}/>
+                    displayType={displayType}
+                    project={project[0]}/>
             }
         </div>
     )

@@ -1,11 +1,14 @@
 import AppLogic from './AppLogic';
+import ProjectsContext from './context/ProjectsContext';
 
 function App() {
-  const { checkDisplayType } = AppLogic();
+  const { data, checkDisplayType } = AppLogic();
 
   return (
     <div className="App">
-      {checkDisplayType()}
+      <ProjectsContext.Provider value={data}>
+        {checkDisplayType()}
+      </ProjectsContext.Provider>
     </div>
   );
 }

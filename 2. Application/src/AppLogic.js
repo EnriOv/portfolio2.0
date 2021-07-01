@@ -6,10 +6,13 @@ import ProjectCard from './components/ProjectCard/ProjectCard';
 import TabletView from './components/TabletView/TabletView';
 
 const AppLogic = () => {
+    const [data, setData] = useState([]);
     const [displayType, setdisplayType] = useState('unknown');
 
     useEffect(() => {
         setdisplayType(checkWindowSize());
+        getData();
+
     }, [])
 
     useEffect(() => {
@@ -19,6 +22,24 @@ const AppLogic = () => {
             window.removeEventListener('resize', checkWindowSize);
         }
     })
+
+    const getData=()=>{
+        fetch('projects.json'
+        ,{
+            headers : { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        })
+        .then((response) => {
+            console.log(response)
+            return response.json();
+        })
+        .then((myJson) => {
+            console.log(myJson);
+            setData(myJson);
+        });
+    }
 
     const checkWindowSize = () => {
         if(window.innerWidth > 1200) {
@@ -48,7 +69,7 @@ const AppLogic = () => {
         }
     }
 
-    return { checkDisplayType }
+    return { data, checkDisplayType }
 }
 
 export default AppLogic;

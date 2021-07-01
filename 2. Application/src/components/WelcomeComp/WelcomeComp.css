@@ -67,6 +67,8 @@
   background-color: var(--main-color);
 }
 
+/* Phone screen size */
+
 @media only screen and (max-width: 320px) {
   .presentation {
     font-size: 0.8rem;
@@ -81,18 +83,22 @@
   }
 }
 
+/* Tablet screen size */
+
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .presentation {
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 1.4em;
     padding: 0 1.2em;
   }
 
   .desk-but {
-    font-size: 1.3rem;
+    font-size: 1rem;
     padding: 0.6em 0;
   }
 }
+
+/* Large screen size */
 
 @media only screen and (min-width: 2000px) {
   .main-draw {

@@ -6,18 +6,21 @@ import TopNav from '../TopNav/TopNav';
 import './PhoneView.css';
 
 const PhoneView = (props) => {
-    const {showInfo, handleShowInfo, handleView, displayComp} = PhoneViewLogic(props);
+    const {displayType} = props;
+    const {data, showInfo, handleShowInfo, handleView, displayComp} = PhoneViewLogic(props);
+
+    const project = data.filter((project) => {return project.id === showInfo.id && project});
 
     return (
         <div className='phone-view'>
             <TopNav className='topnav-cont'/>
             { displayComp() }
-            {showInfo && 
-                <ProjectInfo 
+            {showInfo.show && 
+                <ProjectInfo
                     className={'project-info'}
-                    source={'images/twitter-desk.png'}
                     showInfo={handleShowInfo}
-                    displayType={props.displayType}
+                    displayType={displayType}
+                    project={project[0]}
                 />}
             <BotNav className='botnav-cont' onSelectView={handleView}/>
         </div>

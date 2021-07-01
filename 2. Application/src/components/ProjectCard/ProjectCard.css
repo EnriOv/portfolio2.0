@@ -1,5 +1,5 @@
 :root {
-  --disbable-color: #e8e8e860;
+  --disable-color: #e8e8e860;
 }
 
 .project-card {
@@ -11,18 +11,14 @@
   border-radius: 10px;
 }
 
-.project-card a {
-  text-decoration: none;
-}
-
 .active:hover {
   transition: 0.3s;
-  font-size: 0.9rem;
+  color: var(--toggle-color);
   cursor: pointer;
 }
 
 .disable {
-  color: var(--disbable-color);
+  color: var(--disable-color);
 }
 
 .but span {
@@ -53,8 +49,20 @@
 .card-info {
   grid-area: 1 / 1 / 3 / 2;
   padding: 1em 1.5em 1em 1.2em;
-  color: var(--main-color);
   cursor: pointer;
+}
+
+.selected {
+  color: var(--backg-color);
+  background-color: var(--main-color);
+  border-radius: 10px 0 0 10px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: -1px;
+}
+
+.not-selected {
+  color: var(--main-color);
 }
 
 .project-title {

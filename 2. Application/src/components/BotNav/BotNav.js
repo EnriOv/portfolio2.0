@@ -12,10 +12,10 @@ const BotNav = (props) => {
     return (
         <div className={className}>
             <div className='botnav'>
-                <a title='Home' onClick={() => onSelectView('home')}>
+                <a href='/#' title='Home' onClick={() => onSelectView('home')}>
                     <IconHome className='icon-home' />
                 </a>
-                <a title='Projects' onClick={() => onSelectView('projects')}>
+                <a href='/#' title='Projects' onClick={() => onSelectView('projects')}>
                     <IconSuitcase className='icon-suitcase' />
                 </a>
                 <a href='https://github.com/' target='none' title='GitHub'>

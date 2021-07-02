@@ -40,15 +40,20 @@ const ProjectInfoLogic = (props) => {
         Function returns the decription of the selected project
     */
     const returnDescription = () => {
-        for(let ctr = 0; project.subtitle.length; ctr++) {
-            return (
-                <>
-                    <h2 className='subtitle'>{project.subtitle[ctr]}</h2>
-                    <p className='description'>{project.details[ctr]}</p>
-                </>
-            );
-        }
-        
+        return (
+            <>
+            {
+                project.details.map((item) => {
+                    return (
+                        <>
+                            <h2 className='subtitle'>{item.subtitle}</h2>
+                            <p className='description'>{item.info}</p>
+                        </>
+                    );
+                })
+            }
+            </>
+        );
     }
  
     return {showReturnButton, returnTags, returnDescription}

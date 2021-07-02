@@ -1,5 +1,6 @@
-import {useState, useEffect, useContext} from 'react';
+import {useState, useContext} from 'react';
 
+import Page404 from '../Page404/Page404';
 import ProjectsComp from '../ProjectsComp/ProjectsComp';
 import ProjectsContext from '../../context/ProjectsContext';
 import WelcomeComp from '../WelcomeComp/WelcomeComp';
@@ -30,7 +31,7 @@ const PhoneViewLogic = (props) => {
                 setView(selectedView);
                 break;
             default:
-                setView('home');
+                setView('unknown');
         }
     }
 
@@ -56,7 +57,7 @@ const PhoneViewLogic = (props) => {
             case 'projects':
                 return <ProjectsComp onClickShowInfo={handleShowInfo} />
             default:
-                return <h2>Error</h2>
+                return <Page404 />
         }
     }
 

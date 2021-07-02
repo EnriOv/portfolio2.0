@@ -13,7 +13,7 @@ const ProjectInfo = (props) => {
         <div className={className}>
             <div className='information'>
                 {showReturnButton()}
-                <img className='project-img' src={project.img} alt='project-image'></img>
+                <img className='project-img' src={project.img} alt={'project-demo'}></img>
                 <h2 className='title'>{project.title}</h2>
                 <p className='description'>{project.description}</p>
                 {returnDescription()}

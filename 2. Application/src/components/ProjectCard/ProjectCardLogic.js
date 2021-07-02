@@ -10,7 +10,7 @@ const ProjectCardLogic = (props) => {
             {
             tags.map((tag) => {
                 return (
-                    <div className='tag'>{tag}</div>
+                    <div key={tag} className='tag'>{tag}</div>
                 );
                 })
             }

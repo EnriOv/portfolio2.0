@@ -3,6 +3,9 @@ import {FaChevronLeft} from 'react-icons/fa';
 const ProjectInfoLogic = (props) => {
     const {displayType, showInfo, project} = props;
 
+    const classDemo = project.demo !== null ? 'but but-pro info-active' : 'but but-pro info-disable';
+    const classCode = project.code !== null ? 'but but-pro info-active' : 'but but-pro info-disable';
+
     /*
         Function handles the decision to display a go back button for the project
         info depending of the display being used
@@ -40,18 +43,42 @@ const ProjectInfoLogic = (props) => {
         Function returns the decription of the selected project
     */
     const returnDescription = () => {
-        for(let ctr = 0; project.subtitle.length; ctr++) {
+        return (
+            <>
+            {
+                project.details.map((item) => {
+                    return (
+                        <>
+                            <h2 className='subtitle'>{item.subtitle}</h2>
+                            <p className='description'>{item.info}</p>
+                        </>
+                    );
+                })
+            }
+            </>
+        );
+    }
+
+    /*
+        Function handles the decision of showing the code and demo buttons depending
+        of the display type
+    */
+    const showButtons = () => {
+        if(displayType !== 'desktop') {
             return (
-                <>
-                    <h2 className='subtitle'>{project.subtitle[ctr]}</h2>
-                    <p className='description'>{project.details[ctr]}</p>
-                </>
+                <div className='but-section'>
+                    <a className={classCode} href={project.code} target='none'>
+                        CODE
+                    </a>
+                    <a className={classDemo} href={project.demo} target='none'>
+                        DEMO
+                    </a>
+                </div>
             );
         }
-        
     }
  
-    return {showReturnButton, returnTags, returnDescription}
+    return {showReturnButton, returnTags, returnDescription, showButtons}
 }
 
 export default ProjectInfoLogic;

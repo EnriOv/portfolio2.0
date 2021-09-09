@@ -1,3 +1,4 @@
+import uniqid from 'uniqid';
 import {FaChevronLeft} from 'react-icons/fa';
 
 const ProjectInfoLogic = (props) => {
@@ -8,7 +9,7 @@ const ProjectInfoLogic = (props) => {
 
     /*
         Function handles the decision to display a go back button for the project
-        info depending of the display being used
+        info depending on the display being used
     */
     const showReturnButton = () => {
         if(displayType === 'phone' || displayType === 'tablet') {
@@ -31,7 +32,7 @@ const ProjectInfoLogic = (props) => {
             {
             project.tags.map((tag) => {
                 return (
-                    <div key={tag} className='tag'>{tag}</div>
+                    <div key={uniqid()} className='tag'>{tag}</div>
                 );
                 })
             }
@@ -48,10 +49,10 @@ const ProjectInfoLogic = (props) => {
             {
                 project.details.map((item) => {
                     return (
-                        <>
+                        <div key={uniqid()}>
                             <h2 className='subtitle'>{item.subtitle}</h2>
                             <p className='description'>{item.info}</p>
-                        </>
+                        </div>
                     );
                 })
             }

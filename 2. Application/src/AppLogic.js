@@ -11,7 +11,9 @@ const AppLogic = () => {
     const [displayType, setdisplayType] = useState('loading');
 
     useEffect(() => {
+        // Set display type depending of the window size
         setdisplayType(checkWindowSize());
+        // Get data of the projects to display
         getData();
     }, [])
 
@@ -32,12 +34,13 @@ const AppLogic = () => {
             }
         })
         .then((response) => {
-            console.log(response)
             return response.json();
         })
         .then((myJson) => {
-            console.log(myJson);
             setData(myJson);
+        })
+        .catch((error) => {
+            console.log(error);
         });
     }
 

@@ -35,7 +35,6 @@ const WelcomeCompLogic = (props) => {
                 );
             case 'tablet':
             case 'desktop':
-                console.log('desktop-view')
                 return (
                     <div className='desk-but-cont'>
                         <a href='https://github.com/' target='none' title='GitHub'>
